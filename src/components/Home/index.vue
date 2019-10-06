@@ -1,15 +1,18 @@
 <template>
     <div>
-
+       <app-featured></app-featured>
+        <app-content></app-content>
     </div>
 </template>
 
 <script>
-    import Featured from './featured';
+    import appFeatured from './featured';
+    import appContent from './content';
 
     export default {
         components:{
-            Featured
+            appFeatured,
+            appContent
         }
     }
 </script>
