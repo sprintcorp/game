@@ -14,7 +14,10 @@ components:{
   appHeader,
   appFooter
 
-}
+},
+  created(){
+    this.$store.dispatch("admin/refreshToken");
+  }
 }
 </script>
 

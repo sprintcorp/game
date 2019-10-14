@@ -3,22 +3,27 @@ import App from './App.vue';
 import router from './route';
 import store from './Store/store';
 import Button from './components/UI/Button';
-import { MdCard } from 'vue-material/dist/components';
+import { MdCard, MdButton , MdDialog, MdContent } from 'vue-material/dist/components';
 import 'vue-material/dist/vue-material.min.css';
 import VueResource from 'vue-resource';
-import Vuelidate from 'vuelidate'
+import vuelidate from 'vuelidate';
+import wysiwyg from 'vue-wysiwyg';
 
 Vue.component('app-button',Button);
 
 /*Vue Material*/
 Vue.use(MdCard);
+Vue.use(MdButton);
+Vue.use(MdDialog);
+Vue.use(MdContent);
 
 /*Vue Resource*/
 Vue.use(VueResource);
 
 /*Misc*/
-Vue.use(Vuelidate)
-Vue.http.options.root = '';
+Vue.use(vuelidate);
+Vue.use(wysiwyg,{});
+Vue.http.options.root = 'https://gameapp-2a898.firebaseio.com/';
 new Vue({
   store,
   router,
