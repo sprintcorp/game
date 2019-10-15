@@ -146,7 +146,14 @@
         },
         methods:{
             clearPost(){
-                this.$v.reset();
+                // this doesn't work now (after resetting the form values in the previous lines)
+                //this.$v.$reset()
+
+                // this works
+                //setTimeout(() => { this.$v.$reset() }, 0)
+
+                // this works even better - using Vue.nextTick method
+                this.$nextTick(() => { this.$v.$reset() });
                 this.formdata ={
                     title: '',
                     desc: '',
