@@ -37,6 +37,15 @@ body {
     font-size: 12px;
     background: #F44336;
 }
+
+.delete_link {
+    margin-top: 5px;
+    font-size: 12px;
+    background: #cacace;
+}
+.delete_link:hover {
+    background: #F44336;
+}
 .button_default:hover {
     background: #2b2b2b;;
     color: #ffffff;

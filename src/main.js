@@ -3,7 +3,7 @@ import App from './App.vue';
 import router from './route';
 import store from './Store/store';
 import Button from './components/UI/Button';
-import { MdCard, MdButton , MdDialog, MdContent } from 'vue-material/dist/components';
+import { MdCard, MdButton , MdDialog, MdContent, MdTable,MdDialogConfirm } from 'vue-material/dist/components';
 import 'vue-material/dist/vue-material.min.css';
 import VueResource from 'vue-resource';
 import vuelidate from 'vuelidate';
@@ -16,7 +16,8 @@ Vue.use(MdCard);
 Vue.use(MdButton);
 Vue.use(MdDialog);
 Vue.use(MdContent);
-
+Vue.use(MdTable);
+Vue.use(MdDialogConfirm);
 /*Vue Resource*/
 Vue.use(VueResource);
 
